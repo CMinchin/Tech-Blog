@@ -42,13 +42,13 @@ h1 {
   padding: 0px;
 }
 
-.post > div > h2 {
+.post > div > h2, .post > div > h3 {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
-.post > div > h2 > *{
+.post > div > h2 > *, .post > div > h3 > *{
   display: flex;
   justify-content: space-between;
   color: #D9EAD3;

@@ -17,7 +17,7 @@
   <div>
     <h3>Comment something:</h3>
 
-    <form class="form new-post-form">
+    <form class="form new-comment-form">
       <div class="form-group">
         <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
       </div>
@@ -26,26 +26,23 @@
       </div>
     </form>
   </div>
-  {{!-- <p>
-    <button class="btn btn-primary">Fund this post!</button>
-  </p> --}}
-  {{!-- add comments to actually show up
-  {{#each posts as |post| }}
+  {{#each comments as |comment| }}
   <div class="post">
     <div>
-      <h2>
-        <!-- Call helper function with triple brackets to render the emoji span as HTML -->
-        <a href="/post/{{post.id}}">
-          {{post.name}}
-        </a>
-        <p>Created by {{post.user.name}} on {{format_date post.date_created}}</p>
-      </h2>
+      <h3>
+        <span>
+          {{comment.user.name}}
+        </span>
+        <p>Created on {{format_date comment.date_created}}</p>
+      </h3>
     </div>
     <div>
       <p>
-        {{post.description}}
+        {{comment.description}}
       </p>
     </div>
   </div>
-  {{/each}} --}}
+  {{/each}}
 </div>
+
+<script src="../js/post.js"></script>

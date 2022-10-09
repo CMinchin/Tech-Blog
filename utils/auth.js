@@ -1,5 +1,5 @@
 const withAuth = (req, res, next) => {
-  console.log(req.method, req.route.path, req.body);
+  console.log(req.method, req.baseUrl, req.body);
   // If the user is not logged in, redirect the request to the login route
   if (!req.session.logged_in) {
     res.redirect('/login');

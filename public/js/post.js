@@ -3,19 +3,19 @@ const newFormHandler = async (event) => {
 
   const description = document.querySelector('#post-desc').value.trim();
 
-  if (name && description) {
-    const response = await fetch(`/api/post`, {
+  if (description) {
+    const response = await fetch(`/api/comment`, {
       method: 'POST',
-      body: JSON.stringify({ name, description }),
+      body: JSON.stringify({ description, post_id: location.href.split("/")[4] }),
       headers: {
         'Content-Type': 'application/json',
       },
     });
 
     if (response.ok) {
-      document.location.replace('/user');
+      document.location.reload();
     } else {
-      alert('Failed to create post');
+      alert('Failed to create comment');
     }
   }
 };
@@ -24,7 +24,7 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/post/${id}`, {
+    const response = await fetch(`/api/comment/${id}`, {
       method: 'DELETE',
     });
 
@@ -37,9 +37,9 @@ const delButtonHandler = async (event) => {
 };
 
 document
-  .querySelector('.new-post-form')
+  .querySelector('.new-comment-form')
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.post-list')
+  .querySelector('.comment-list')
   .addEventListener('click', delButtonHandler);
