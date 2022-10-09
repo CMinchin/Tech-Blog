@@ -1,10 +1,44 @@
-header, .post {
-  background-color: #231010;
+body {
+  background-color: #D9EAD3;
 }
 
+header {
+  background-color: #231010;
+  padding: 0px 40px;
+}
+
+nav {
+  display: flex;
+}
+
+nav > * {
+  color: #D9EAD3;
+  padding: 15px 20px;
+}
+
+.title {
+  display: flex;
+  padding-left: 20px;
+}
+
+h1 {
+  background-color: #D9EAD3;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 5px 5px #A7A7A7;
+  margin-bottom: 18px;
+}
+
+/* main {
+  display: flex;
+  flex-direction: column;
+} */
+
 .post {
+  margin-bottom: 26px;
   border: solid #231010 3px;
-  border-radius: 6px;
+  background-color: #231010;
+  border-radius: 1px;
 }
 
 .post > div > h2 {
@@ -25,7 +59,7 @@ header, .post {
 
 .post > div > p {
   color: #231010;
-  border-radius: 3px;
+  border-radius: 1px;
   background-color: #D9EAD3;
   margin: 0px;
 }
@@ -33,9 +67,7 @@ header, .post {
 .no-button {
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
-  color: #1b89bc;
   text-decoration: none;
   font-size: 100%;
 }
@@ -43,10 +75,4 @@ header, .post {
 .no-button:hover {
   color: #065b83;
   text-decoration: underline;
-}
-
-.dollar-amount {
-  color: #056605;
-  font-weight: bold;
-  margin-left: -5px;
 }
