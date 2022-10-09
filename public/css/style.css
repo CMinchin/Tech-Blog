@@ -1,5 +1,33 @@
-header, .project:not(:last-child) {
-  border-bottom: 1px solid #ccc;
+header, .post {
+  background-color: #231010;
+}
+
+.post {
+  border: solid #231010 3px;
+  border-radius: 6px;
+}
+
+.post > div > h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.post > div > h2 > *{
+  display: flex;
+  justify-content: space-between;
+  color: #D9EAD3;
+}
+
+.post > div > * {
+  padding: 0px 10px;
+}
+
+.post > div > p {
+  color: #231010;
+  border-radius: 3px;
+  background-color: #D9EAD3;
+  margin: 0px;
 }
 
 .no-button {
