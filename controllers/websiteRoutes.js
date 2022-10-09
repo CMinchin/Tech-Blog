@@ -48,9 +48,14 @@ router.get('/post/:id', async (req, res) => {
     });
 
     const post = postData.get({ plain: true });
-    console.log(post)
+    const comments = post.comments.map(comment => {return {
+      ...comment,
+      myComment: comment.user_id == req.session.user_id
+    }});
+    console.log(post, comments)
     res.render('post', {
       ...post,
+      comments,
       logged_in: req.session.logged_in
     });
   } catch (err) {

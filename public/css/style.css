@@ -49,9 +49,16 @@ h1 {
 }
 
 .post > div > h2 > *, .post > div > h3 > *{
-  display: flex;
-  justify-content: space-between;
   color: #D9EAD3;
+  flex: 1 1 0;
+}
+
+.post > div > h2 > span, .post > div > h3 > span{
+  text-align: left;
+}
+
+.post > div > h2 > p, .post > div > h3 > p{
+  text-align: right;
 }
 
 .post > div > * {

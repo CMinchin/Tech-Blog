@@ -12,7 +12,14 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
-    res.status(400).json(err);
+    console.log({
+      ...err,
+      statusText: err.errors[0].message
+    });
+    res.status(400).json({
+      ...err,
+      statusText: 'Validation len on password failed'
+    });
   }
 });
 

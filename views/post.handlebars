@@ -28,11 +28,16 @@
   </div>
   {{#each comments as |comment| }}
   <div class="post">
-    <div>
+    <div data-id="{{comment.myComment}}">
       <h3>
         <span>
           {{comment.user.name}}
         </span>
+        {{#if comment.myComment}}
+        <div class="col-md-1">
+          <button class="btn btn-sm btn-danger delete" data-id="{{comment.id}}">DELETE</button>
+        </div>
+        {{/if}}
         <p>Created on {{format_date comment.date_created}}</p>
       </h3>
     </div>
