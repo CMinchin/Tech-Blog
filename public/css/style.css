@@ -39,6 +39,7 @@ h1 {
   border: solid #231010 3px;
   background-color: #231010;
   border-radius: 1px;
+  padding: 0px;
 }
 
 .post > div > h2 {

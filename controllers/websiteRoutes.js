@@ -57,8 +57,9 @@ router.get('/user', withAuth, async (req, res) => {
       attributes: { exclude: ['password'] },
       include: [{ model: Post }],
     });
-
+    
     const user = userData.get({ plain: true });
+    console.log(user);
 
     res.render('user', {
       ...user,
