@@ -1,3 +1,3 @@
 # release: npm i
-release: cp .env.EXAMPLE .env && npm run seed
+release: echo "joe biden"
 web: npm run start
