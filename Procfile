@@ -1,3 +1,3 @@
 # release: npm i
-release: ./script.sh
+release: cp .env.EXAMPLE .env && ls -la && npm run seed
 web: npm run start
